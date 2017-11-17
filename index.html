@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DE MAGZ</title>
+	<link rel="stylesheet" href="css/materialize.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/flickity.min.css">
+	<link rel="stylesheet" href="css/ionic.css">
+</head>
+<body>
+	<div id="loader"></div>
+  <ul id="slide-out" class="side-nav">
+    <li>
+		<center><h3><i class="ion-ios-gear"></i> Settings</h3></center>
+    </li>
+    <li>
+		<center>
+		  <div class="switch">
+		    <label>
+		    Night Theme 
+		      <input id="night-mode" type="checkbox" checked>
+		      <span class="lever"></span>
+		    </label>
+		  </div>
+		</center>
+    </li>
+    <li>
+		<center>
+		  <div class="switch">
+		    <label>
+		    Full Screen 
+		      <input id="full-screen" type="checkbox">
+		      <span class="lever"></span>
+		    </label>
+		  </div>
+		</center>
+    </li>
+    <li>
+		<center>
+		  <div class="switch">
+		    <label>
+		    Music 
+		      <input id="music" type="checkbox" checked>
+		      <span class="lever"></span>
+		    </label>
+		  </div>
+		</center>
+    </li>
+  </ul>
+
+	<div id="nm" class="background-dark"><img src="img/bg-dark.png"></div>
+	<div id="lm" class="background-white disabled"><img src="img/bg-light.png"></div>
+<div style="left: -11px;top: 0;position: absolute;">
+	<a id="nm" class="btn-custom"><img class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Thumbnail" data-target="thumbnail" id="thumbnail-open" width="130" src="img/thumbnail.png"></a>
+	<a id="lm" class="btn-custom disabled"><img class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Thumbnail" data-target="thumbnail" id="thumbnail-open" width="130" src="img/thumbnailLM.png"></a>
+</div>
+<div class="top right">
+	<a id="nm" class="btn-custom"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="Zoom In" id="zoom-in" src="img/zoomin.png"></a>
+	<a id="nm" class="btn-custom"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="Zoom Out" id="zoom-out" src="img/zoomout.png"></a>
+	<a id="nm" class="btn-custom"><img class="tooltipped icon opacity" data-position="bottom" data-delay="50" data-tooltip="Drag" id="drag" src="img/dragable.png"></a>
+	<a id="lm" class="btn-custom disabled"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="Zoom In" id="zoom-in" src="img/zoominLM.png"></a>
+	<a id="lm" class="btn-custom disabled"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="Zoom Out" id="zoom-out" src="img/zoomoutLM.png"></a>
+	<a id="lm" class="btn-custom disabled"><img class="tooltipped icon opacity" data-position="bottom" data-delay="50" data-tooltip="Drag" id="drag" src="img/dragableLM.png"></a>
+	<a id="en" class="btn-custom" style="margin-right: 100px;"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="English" id="en-mode" src="img/lang-en.png"></a>
+	<a id="id" class="btn-custom disabled" style="margin-right: 100px;"><img class="tooltipped icon" data-position="bottom" data-delay="50" data-tooltip="Indonesia" id="id-mode" src="img/lang-id.png"></a>
+</div>
+<div id="nm" class="arrow">
+	<span id="prev" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Previous">
+		<img width="100" src="img/left.png">
+	</span>
+	<span id="next" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Next">
+		<img width="100" src="img/right.png">
+	</span>
+</div>
+<div id="lm" class="arrow disabled">
+	<span id="prev" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Previous">
+		<img width="100" src="img/leftLM.png">
+	</span>
+	<span id="next" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Next">
+		<img width="100" src="img/rightLM.png">
+	</span>
+</div>
+<!-- START FLIP BOOK  -->
+	<div id="demagz-container">
+		<div id="demagz-flipbook" class="shadow"></div>
+	</div>
+<!-- END FLIP BOOK  -->
+<div id="nm" class="bottom left">
+	<a href="https://facebook.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Facebook" src="img/facebook.png"></a>
+	<a href="https://instagram.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Instagram" src="img/instagram.png"></a>
+	<a href="https://twitter.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Twitter" src="img/twitter.png"></a>
+</div>
+<div id="lm" class="bottom left disabled">
+	<a href="https://facebook.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Facebook" src="img/facebookLM.png"></a>
+	<a href="https://instagram.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Instagram" src="img/instagramLM.png"></a>
+	<a href="https://twitter.com/official.demagz" class="btn-custom"><img class="tooltipped icon" data-position="top" data-delay="50" data-tooltip="Twitter" src="img/twitterLM.png"></a>
+</div>
+<div id="nm" class="bottom center">
+	<a class="btn-custom"><img id="go-cover" class="icon icon-big tooltipped" data-position="top" data-delay="50" data-tooltip="Jump First Page" src="img/double-kiri.png"></a>
+	<a class="btn-logo"><img id="refresh" class="icon icon-logo tooltipped" data-position="top" data-delay="50" data-tooltip="Refresh" src="img/logo.png"></a>
+	<a class="btn-custom"><img id="go-backcover" class="icon icon-big tooltipped" data-position="top" data-delay="50" data-tooltip="Jum Last Page" src="img/double-kanan.png"></a>
+</div>
+<div id="lm" class="bottom center disabled">
+	<a class="btn-custom"><img id="go-cover" class="icon icon-big tooltipped" data-position="top" data-delay="50" data-tooltip="Jump First Page" src="img/double-kiriLM.png"></a>
+	<a class="btn-logo"><img id="refresh" class="icon icon-logo tooltipped" data-position="top" data-delay="50" data-tooltip="Refresh" src="img/logoLM.png"></a>
+	<a class="btn-custom"><img id="go-backcover" class="icon icon-big tooltipped" data-position="top" data-delay="50" data-tooltip="Jum Last Page" src="img/double-kananLM.png"></a>
+</div>
+<div id="nm" class="bottom right">
+	<a class="btn-custom"><img data-activates="slide-out" class="icon button-collapse tooltipped" data-position="top" data-delay="50" data-tooltip="Setting" src="img/setting.png"></a>
+	<a class="btn-custom"><img id="search-open" class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Search" src="img/search.png"></a>
+	<a href="media/DeMagz.pdf" class="btn-custom"><img class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Print" src="img/print.png"></a>
+	<a href="media/Demagz.apk" style="margin-right: 100px;" class="btn-custom"><img id="help" class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Download Android" src="img/android.png"></a>
+</div>
+<div id="lm" class="bottom right disabled">
+	<a class="btn-custom"><img data-activates="slide-out" class="icon button-collapse tooltipped" data-position="top" data-delay="50" data-tooltip="Setting" src="img/settingLM.png"></a>
+	<a class="btn-custom"><img id="search-open" class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Search" src="img/searchLM.png"></a>
+	<a href="media/DeMagz.pdf" class="btn-custom"><img class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Print" src="img/printLM.png"></a>
+	<a href="media/Demagz.apk" style="margin-right: 100px;" class="btn-custom"><img id="help" class="icon tooltipped" data-position="top" data-delay="50" data-tooltip="Download Android" src="img/androidLM.png"></a>
+</div>
+
+  <!-- Modal search -->
+  <div id="search" class="modal" >
+    <div class="modal-content">
+		<div class="row">
+		<form class="col s12">
+		  <div class="row">
+		  <center>
+		    <div class="input-field col s12">
+		      <i class="ion-android-search prefix"></i>
+		      <input id="quicksearch" type="text" class="validate" value="" autocomplete="off">
+		      <label for="quicksearch">Apa yang ingin kamu cari ?</label>
+		    </div>
+		  </center>
+		  </div>
+		</form>
+		</div>
+		<div class="row search">
+		<!-- RESULT -->
+		<div id="result"></div>
+		<div id="search-loader"></div>
+		</div>
+    </div>
+  </div>
+
+  <!-- Modal Thumbnail -->
+  <div id="thumbnail" class="modal">
+    <div class="modal-content">
+      <!-- CONTENT THUMBNAIL -->
+		<div id="carousel" class="carousel" data-flickity='{ "groupCells": true }'>
+		  <div class="carousel-cell"><a href="#page1"><img src="assets/pages/covert.png"></a></div>
+		  <div class="carousel-cell"><a href="#page2"><img src="assets/pages/it.png"></a></div>
+		  <div class="carousel-cell"><a href="#page3"><img src="assets/pages/ii.jpg"></a></div>
+		  <div class="carousel-cell"><a href="#page4"><img src="assets/pages/1t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page5"><img src="assets/pages/2t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page6"><img src="assets/pages/3t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page7"><img src="assets/pages/4t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page8"><img src="assets/pages/5t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page9"><img src="assets/pages/6t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page10"><img src="assets/pages/7t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page11"><img src="assets/pages/8t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page12"><img src="assets/pages/9t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page13"><img src="assets/pages/10t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page14"><img src="assets/pages/11t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page15"><img src="assets/pages/12t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page16"><img src="assets/pages/13t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page17"><img src="assets/pages/14t.png"></a></div>
+		  <div class="carousel-cell"><a href="#page18"><img src="assets/pages/15.jpg"></a></div>
+		  <div class="carousel-cell"><a href="#page19"><img src="assets/pages/16.jpg"></a></div>
+		  <div class="carousel-cell"><a href="#page20"><img src="assets/pages/backcovert.png"></a></div>
+		</div>
+    </div>
+  </div>
+
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	<script src="js/flickity.pkgd.min.js"></script>
+	<script src="js/lib/turn.min.js"></script>
+	<!-- <script src="js/lib/zoom.min.js"></script> -->
+	<script src="js/materialize.min.js"></script>
+	<script src="js/article.js"></script>
+	<script src="js/demagz.js"></script>
+</body>
+</html>
